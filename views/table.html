@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Employee Manager</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./table.js"></script>
+
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#staff">Staff</a></li>
+        <li><a data-toggle="tab" href="#team">Teams</a></li>
+        <li><a data-toggle="tab" href="#project">Projects</a></li>
+        <li><a data-toggle="tab" href="#chat">Chat</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="staff" class="tab-pane fade in active row">
+            <div class="col-lg-2">
+                <div id="staffInfo" name="staff_form"></div>
+            </div>
+            <div class="col-lg-10">
+                <table id="staffTable" class="table table-bordered table-striped table-hover">
+                    <tr id="staffHeaders">
+                        <td>ID</td>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Position</th>
+                        <th>Email</th>
+                        <th>Work Days</th>
+                        <th>Absent Days</th>
+                        <th>Team</th>
+                        <th>Project</th>
+                    </tr>
+                    <tbody id='staffRows'>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>69/69/69</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="team" class="tab-pane fade">
+            <div class="col-lg-2">
+                <div id="teamInfo" name="team_form"></div>
+            </div>
+            <div class="col-lg-10">
+                <table id="teamTable" class="table table-bordered table-striped table-hover">
+                    <tr id="teamHeaders">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Members</th>
+                        <th>Project</th>
+                    </tr>
+                    <tbody id='teamRows'>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>69/69/69</td>
+                            <td>random</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="project" class="tab-pane fade">
+            <div class="col-lg-2">
+                <div id="projectInfo" name="project_form"></div>
+            </div>
+            <div class="col-lg-10">
+                <table id="projectTable" class="table table-bordered table-striped table-hover">
+                    <tr id="projectHeaders">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Team</th>
+                    </tr>
+                    <tbody id='projectRows'>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>69/69/69</td>
+                            <td>random</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id='chat' class="tab-pane fade container-fluid">
+            <div class="row jumbotron form-group" style="height:100%; width: 100%;"
+                id="myForm">
+                <h1>Chat</h1>
+
+                <label for="msg" class="form-control"><b>Message</b></label>
+                <textarea class="form-control input-lg" readonly="true" placeholder="Type message.." id="msg"></textarea>
+                <input type="text" name="mssg" id="chat-message" class="form-control">
+                <button type="submit" onclick="sendMessage()" class="btn btn-primary" class="form-control">Send</button>
+                <button type="button" class="btn btn-danger" onclick="closeForm()" class="form-control">Close</button>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

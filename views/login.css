@@ -1,0 +1,44 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background: dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > button{
+    width: 70%;
+}
+
+form > label, input, button{
+    width: 70%;
+    padding: 40px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+form > label{
+    width: 100%;
+    text-align: center;
+    background: burlywood;
+    text-decoration: black;
+    text-shadow: blue;
+    text-decoration-style: wavy;
+    text-transform: capitalize;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
