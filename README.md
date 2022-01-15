@@ -1,5 +1,4 @@
-# Staff Management Web Applciation
-
+# Team Management Dashboard (Web Applciation)
 Staff Management project implemented in NodeJS and ExpressJS with Restful API and Bootstrap for front-end styling.
 
 Features:
