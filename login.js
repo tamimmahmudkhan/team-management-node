@@ -31,7 +31,7 @@ io.on('connection', () => {
 
 app.get('/', (req, res) => {
   console.log("Loading homepage")
-  res.sendFile('/home/igneel/Documents/final-project/views/login.html')
+  res.sendFile(__dirname + '/views/login.html')
 })
 
 app.post('/', function (req, res) {
@@ -64,7 +64,7 @@ app.post('/', function (req, res) {
 })
 
 app.get('/register.html', (req, res) => {
-  res.sendFile('/home/igneel/Documents/final-project/views/register.html')
+  res.sendFile(__dirname + '/views/register.html')
 })
 
 app.post('/register.html', (req, res) => {
@@ -83,7 +83,7 @@ app.post('/register.html', (req, res) => {
 
 app.get('/table.html', (req, res) => {
   if (req.session.loggedUser) {
-    res.render('/home/igneel/Documents/final-project/views/table.html')
+    res.render(__dirname + '/views/table.html')
   } else {
     res.redirect("/")
   }
