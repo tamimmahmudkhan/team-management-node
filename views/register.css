@@ -1,0 +1,66 @@
+/* Reset default margins and padding */
+body, h1, h2, h3, p, ul, ol, li, form, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Totally tubular centering */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0099cc, #003366);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Styling for the form container */
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+}
+
+/* Stylin' those input fields, bro */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0099cc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Label styling */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the "Register" button */
+button[type="submit"] {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Hover effect for the button */
+button[type="submit"]:hover {
+    background-color: #ff6600;
+}

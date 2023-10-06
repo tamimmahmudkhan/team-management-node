@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const { json } = require('express');
 const sqlite = require('sqlite3').verbose();
-const port = 3000
+const port = process.env.port || 3000
 
 app.use(express.static(__dirname + '/views'))
 app.use(session({
